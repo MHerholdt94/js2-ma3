@@ -15,9 +15,8 @@ export default function createMenu() {
   if (username) {
     authLink = `<a href="profile.html" class="nav-link ${
       pathname === "/profile.html" ? "active" : ""
-    }" ${
-      pathname === "/profile.html" ? `aria-current="page"` : ""
-    }>Profile</a>`;
+    }" ${pathname === "/profile.html" ? `aria-current="page"` : ""}>Profile</a>
+    <button class="btn btn-outline-dark ms-4 w-100 text-nowrap" id="logout">Logout ${username}</button>`;
   }
 
   container.innerHTML = `<a href="/" class="nav-link ${
@@ -27,5 +26,3 @@ export default function createMenu() {
 
   logoutButton();
 }
-
-localStorage.clear();

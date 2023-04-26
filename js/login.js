@@ -68,7 +68,7 @@ async function doLogin(username, password) {
     if (json.user) {
       displayMessage(
         "success",
-        `Welcome back ${username}<p>Returning to home page <span id="countdown"></span></p>`,
+        `Welcome back ${username}<p>Logging in... <span id="countdown"></span></p>`,
         ".message-container"
       );
 
