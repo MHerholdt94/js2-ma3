@@ -1,0 +1,11 @@
+.navbar-nav a {
+    font-weight: 500;
+}
+
+.navbar-nav a.active {
+    text-decoration: underline;
+}
+
+.navbar-nav a:hover {
+    text-decoration: underline;
+}
