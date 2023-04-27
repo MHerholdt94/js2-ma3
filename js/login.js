@@ -2,11 +2,18 @@ import displayMessage from "./components/displayMessage.js";
 import { saveToken, saveUser } from "./utils/storage.js";
 import { baseUrl } from "./settings/api.js";
 import createMenu from "./components/createMenu.js";
+import { getUsername } from "./utils/storage.js";
 
 const form = document.querySelector("form");
 const username = document.querySelector("#username");
 const password = document.querySelector("#password");
 const message = document.querySelector(".message-container");
+
+const usernameExists = getUsername();
+
+if (usernameExists) {
+  location.href = "/profile.html";
+}
 
 createMenu();
 
@@ -68,7 +75,7 @@ async function doLogin(username, password) {
     if (json.user) {
       displayMessage(
         "success",
-        `Welcome back ${username}<p>Logging in... <span id="countdown"></span></p>`,
+        `Welcome back, ${username}!<p>Logging in... <span id="countdown"></span></p>`,
         ".message-container"
       );
 
@@ -87,7 +94,7 @@ async function doLogin(username, password) {
       }, 1000);
 
       setTimeout(function () {
-        location.href = "/";
+        location.href = "/profile.html";
       }, 4000);
     }
 

@@ -9,3 +9,17 @@
 .navbar-nav a:hover {
     text-decoration: underline;
 }
+
+#logout {
+    background-color: #9a2632b3;
+    color: white;
+    font-weight: 500;
+    border: none;
+}
+
+@media (max-width: 576px) {
+    #logout {
+        margin: .5rem 0;
+        width: 125px;
+    }
+}

@@ -13,10 +13,10 @@ export default function createMenu() {
   }" ${pathname === "/login.html" ? `aria-current="page"` : ""}>Login</a>`;
 
   if (username) {
-    authLink = `<a href="profile.html" class="nav-link ${
+    authLink = `<a href="profile.html" class="nav-link me-3 ${
       pathname === "/profile.html" ? "active" : ""
     }" ${pathname === "/profile.html" ? `aria-current="page"` : ""}>Profile</a>
-    <button class="btn btn-outline-dark ms-4 w-100 text-nowrap" id="logout">Logout ${username}</button>`;
+    <button class="btn btn-outline-dark text-nowrap" id="logout">Logout ${username}</button>`;
   }
 
   container.innerHTML = `<a href="/" class="nav-link ${

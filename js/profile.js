@@ -6,8 +6,9 @@ createMenu();
 const heading = document.querySelector("h1");
 const username = getUsername();
 
+document.title = `Website | ${username}'s Profile`;
 heading.innerHTML = `Hello, ${username}`;
 
 if (!username) {
-  location.href = "/";
+  location.href = "/login.html";
 }

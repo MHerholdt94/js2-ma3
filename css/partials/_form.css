@@ -2,10 +2,6 @@ form {
     max-width: 400px;
 }
 
-form .btn {
-    width: 150px;
-}
-
 form .message-container {
     text-align: center;
 }
